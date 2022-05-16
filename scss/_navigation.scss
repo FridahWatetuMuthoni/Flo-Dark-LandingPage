@@ -1,0 +1,50 @@
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $dark-blue-intro;
+    padding: 1rem;
+    font-family:'Raleway', sans-serif ;
+    z-index: 5;
+
+    .logo{
+        height: 25px;
+        width: 100px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .links{
+        a{
+            display: block;
+            color: $white;
+            padding:5px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width:768px){
+    .links{
+        a{
+            font-size: 16px;
+            padding: 1rem;
+        }
+    }
+
+    .logo {
+        height: 50px;
+        width: 150px;
+    }
+}
+
+@media (min-width:1140px){
+    .links {
+        a {
+            padding: 2rem;
+        }
+    }
+}

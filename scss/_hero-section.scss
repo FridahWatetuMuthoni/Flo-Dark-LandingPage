@@ -1,0 +1,101 @@
+.hero-section{
+    min-height: 89vh;
+    width: 100%;
+    position: relative;
+    background: $dark-blue-intro;
+    background-repeat: no-repeat;
+    z-index: 50;
+    line-height: 1.5;
+
+    
+    h1{
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+.hero-section::after{
+    content: '';
+    width: 100%;
+    background: url('../images/bg-curvy-mobile.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 45vh;
+    z-index: -20;
+}
+
+
+
+.hero-info{
+    width: 80%;
+    text-align: center;
+
+    .info{
+        span{
+            display: block;
+        }
+    }
+}
+
+.info{
+    margin:20px 0;
+    p{
+        margin: 15px 0;
+    }
+}
+
+.btn {
+    padding: 1rem 3.5rem;
+    border: none;
+    border-radius: 3rem;
+    color:$white;
+    background: linear-gradient($gradient-cyan, $gradient-blue);
+}
+
+@media (min-width:768px){
+    .hero-section{
+        min-height: 0;
+        height: 700px;
+        
+        h1 {
+            font-size: 32px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+
+.hero-section::after {
+        content: '';
+        width: 100%;
+        background: url('../images/bg-curvy-desktop.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 450px;
+    }
+
+    .hero-img {
+        padding: 30px;
+    }
+
+    .hero-info{
+        width: 60%;
+    }
+}
+
+@media (min-width:1140px){
+    .hero-section{
+        height: 950px;
+    }
+}
