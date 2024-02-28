@@ -1,84 +1,83 @@
-.about{
-    min-height: 100vh;
+.about {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  background-color: $dark-blue;
+  grid-gap: 30px;
+  line-height: 1.5;
+  padding: 40px 0;
+
+  .row {
     display: grid;
-    grid-template-rows: 1fr;
-    background-color: $dark-blue;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
-    line-height: 1.5;
-    padding: 40px 0;
-    
+    text-align: center;
+  }
 
-    .row{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 30px;
-        text-align: center;
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+
+    .card-img {
+      height: 150px;
+      width: 150px;
+      margin: 20px 0;
     }
 
-    .card{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        .card-img{
-            height: 150px;
-            width: 150px;
-            margin: 20px 0;
-        }
-
-        p{
-            max-width: 400px;
-            margin: 10px 0;
-            font-size: 12px;
-        }
-
-        h1{
-            font-size: 24px;
-        }
-
-        .security{
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
+    p {
+      max-width: 400px;
+      margin: 10px 0;
+      font-size: 12px;
     }
-}
 
-@media (min-width:768px) {
-    .about{
-        grid-template-rows: 1fr 1fr;
-        min-height: 0;
-        height: 900px;
-        grid-gap:10px;
-        padding: 60px 0;
-    .row{
-        grid-template-columns: 1fr 1fr;
+    h1 {
+      font-size: 24px;
+    }
+
+    .security {
+      img {
         width: 100%;
-        margin: 0 auto;
-        grid-gap:10px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    grid-template-rows: 1fr 1fr;
+    min-height: 0;
+    height: 900px;
+    grid-gap: 10px;
+    padding: 60px 0;
+    .row {
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin: 0 auto;
+      grid-gap: 10px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .about {
+    grid-gap: 30px;
+    .row {
+      grid-gap: 30px;
+      width: 80%;
     }
 
-}
-}
+    .card {
+      h1 {
+        font-size: 32px;
+      }
 
-@media (min-width:1120px){
-    .about{
-        grid-gap: 30px;
-        .row{
-            grid-gap: 30px;
-            width: 80%;
-        }
-
-            .card {
-                h1 {
-                    font-size: 32px;
-                }
-
-                p {
-                    font-size: 12px;
-                }
-            }
+      p {
+        font-size: 12px;
+      }
     }
+  }
 }
